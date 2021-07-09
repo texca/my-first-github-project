@@ -32,6 +32,9 @@ counts of each user type
 counts of each gender (only available for NYC and Chicago)
 earliest, most recent, most common year of birth (only available for NYC and Chicago)
 
+5.Note once all details are displayed the user can choose to exit or continue to interact for additional details based on a different city,
+month and day.
+
 Files used:{Please note I have not added this to my project due to security reasons. Please contact admin incase you need access to this data.}
 chicago.csv
 new_york_city.csv
