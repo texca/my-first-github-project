@@ -178,6 +178,8 @@ def user_stats(df):
     # TO DO: Display counts of user types
     user_types_count=df['User Type'].value_counts()
     print('count of user types:',user_types_count)
+    
+#Please note Washington city has no gender count and birthyear data.
 
     # TO DO: Display counts of gender
     if 'Gender' in df:
