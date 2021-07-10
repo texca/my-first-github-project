@@ -29,6 +29,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
+          try
          month=str(input('Enter name of one month(from January to June) to filter by or "all" ,for no filter :')).lower()
          months=['january', 'february', 'march', 'april', 'may', 'june']
          if month == 'january':
@@ -46,6 +47,8 @@ def get_filters():
          elif month == 'all':
              print('all')
          else:
+             raise(Exception)
+			except Exception as error:
               print('Invalid Input!,please restart again!.')
          break
 
