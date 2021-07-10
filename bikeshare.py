@@ -51,6 +51,7 @@ def get_filters():
 
  # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
+          try
        day=str(input('Enter name of one day to filter by or "all",for no filter:')).lower()
        days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
        if day == 'monday':
