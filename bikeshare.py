@@ -71,6 +71,8 @@ def get_filters():
        elif day == 'all':
             print('all')
        else:
+           raise(Exception)
+			except Exception as error:
            print('Invalid Input!,please reatart again!.')
        break
        print('-'*40)
