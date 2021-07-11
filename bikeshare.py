@@ -2,6 +2,8 @@ import time
 import pandas as pd
 import numpy as np
 
+#Below shows files containing the data for the three cities:
+
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -28,6 +30,7 @@ def get_filters():
 
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
+          try
          month=str(input('Enter name of one month(from January to June) to filter by or "all" ,for no filter :')).lower()
          months=['january', 'february', 'march', 'april', 'may', 'june']
          if month == 'january':
@@ -45,11 +48,14 @@ def get_filters():
          elif month == 'all':
              print('all')
          else:
+             raise(Exception)
+			except Exception as error:
               print('Invalid Input!,please restart again!.')
          break
 
  # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
+          try
        day=str(input('Enter name of one day to filter by or "all",for no filter:')).lower()
        days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
        if day == 'monday':
@@ -69,6 +75,8 @@ def get_filters():
        elif day == 'all':
             print('all')
        else:
+           raise(Exception)
+			except Exception as error:
            print('Invalid Input!,please reatart again!.')
        break
        print('-'*40)
@@ -178,7 +186,7 @@ def user_stats(df):
     # TO DO: Display counts of user types
     user_types_count=df['User Type'].value_counts()
     print('count of user types:',user_types_count)
-    
+
 #Please note Washington city has no gender count and birthyear data.
 
     # TO DO: Display counts of gender
@@ -188,7 +196,7 @@ def user_stats(df):
     else:
         print('There is no gender count data for this city')
     # TO DO: Display earliest, most recent, and most common year of birth
-    if 'Birth Year' in df:
+        if 'Birth Year' in df:
         earliest=df['Birth Year'].min()
         print('The earliest Birth year is:',earliest)
         recent=df['Birth Year'].max()
